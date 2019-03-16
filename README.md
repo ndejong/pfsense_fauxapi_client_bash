@@ -22,6 +22,7 @@ system_config=$(fauxapi_config_get ${fauxapi_host})
 echo "${system_config}" | jq . 
 ```
 
-It is recommended to review the commented out samples in the file provided `fauxapi-sample.sh`
-that cover all API calls.
+It is recommended to review the commented out samples in the provided 
+`fauxapi-sample.sh` file that cover all possible FauxAPI calls to gain a better
+idea on usage.
 
