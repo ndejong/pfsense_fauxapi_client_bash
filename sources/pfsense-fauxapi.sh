@@ -1,6 +1,6 @@
 #!/bin/bash
 # 
-# Copyright 2017 Nicholas de Jong  <contact[at]nicholasdejong.com>
+# Copyright 2017-2020 Nicholas de Jong  <contact[at]nicholasdejong.com>
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -193,7 +193,7 @@ fauxapi_function_call() {
     echo `curl \
         -X POST \
         --silent \
-        --insecure \
+        ${fauxapi_curl_options} \
         --header "fauxapi-auth: ${fauxapi_auth}" \
         --header "Content-Type: application/json" \
         --data "${fauxapi_data}" \

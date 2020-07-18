@@ -1,6 +1,6 @@
 #!/bin/bash
 # 
-# Copyright 2017 Nicholas de Jong  <contact[at]nicholasdejong.com>
+# Copyright 2017-2020 Nicholas de Jong  <contact[at]nicholasdejong.com>
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -46,7 +46,7 @@ export fauxapi_auth=$(fauxapi_auth ${fauxapi_apikey} ${fauxapi_apisecret})
 # config_get
 system_config=$(fauxapi_config_get ${fauxapi_host})
 
-# make the output look pretty if jq is available on th is system
+# make the output look pretty if jq is available on this system
 if [[ $(which jq | wc -l) -gt 0 ]]; then
     echo "${system_config}" | jq .data.config
 else
